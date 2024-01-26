@@ -1,0 +1,551 @@
+{
+	"info": {
+		"_postman_id": "448b339e-6c59-4cdc-9f57-5f9415b43966",
+		"name": "Webentwicklung",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30888417"
+	},
+	"item": [
+		{
+			"name": "Recipe",
+			"item": [
+				{
+					"name": "Post Recipe",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"@#$RF\",\n    \"description\": \"\",\n    \"rating\": \"2.2\",\n    \"image\": \"asflij\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/recipe",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"recipe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Recipe",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Recipe",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Put Recipe",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Doner\",\n    \"description\": \"baked\",\n    \"rating\": 2.2,\n    \"picture\": 2.2,\n    \"recipeTags\": [\n    {\n        \"category\": {\n            \"name\": \"Wet\"\n        }\n    }],\n    \"recipeIngredients\": [{\n        \"unit\": \"g\",\n        \"amount\": 40,\n        \"ingredient\": {\n            \"name\": \"Chicken\"\n        }\n    },\n    {\n        \"unit\": \"g\",\n        \"amount\": 20,\n        \"ingredient\": {\n            \"name\": \"Corn\"\n        }\n    }],\n    \"recipeSteps\": [{\n        \"number\": 1,\n        \"description\": \"Fry It\",\n        \"ingredient\": {\n            \"name\": \"Corn\"\n        }\n    },\n    {\n        \"number\": 2,\n        \"description\": \"Boiled It\",\n        \"ingredient\": {\n            \"name\": \"Chicken\"\n        }\n    }]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/recipe/Lamacun",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"recipe",
+								"Lamacun"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Recipe",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/recipe/Doner",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"recipe",
+								"Doner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Ingredients from Recipe",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/recipe/Doner",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"recipe",
+								"Doner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Categories from Recipe Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/recipe/Doner",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"recipe",
+								"Doner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Steps from Recipe",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/recipe/Doner",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"recipe",
+								"Doner"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Post Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Vietnamesisch\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/category",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/category/Vietnamesisch",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"Vietnamesisch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/category/Vietnamesisch",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"Vietnamesisch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Dried\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/category/Vietnamesisch",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"Vietnamesisch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/category/Wet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"Wet"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ingredient",
+			"item": [
+				{
+					"name": "Post Ingredient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Chicken\",\n    \"description\": \"A kind of meat\",\n    \"link\": \"not available\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/ingredient",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ingredient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Ingredient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/ingredient/Chicken",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ingredient",
+								"Chicken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Ingredient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/ingredient/Chicken",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ingredient",
+								"Chicken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Category Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Corn\",\n    \"description\": \"Yellow Hard Corn\",\n    \"link\": \"Not found\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/ingredient/Cornn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ingredient",
+								"Cornn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Ingredient",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/ingredient/Corn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ingredient",
+								"Corn"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tag/Step/RecipeIngredient",
+			"item": [
+				{
+					"name": "Get Ingredients From Recipe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/recipe/recipeingredient/Chicken",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"recipe",
+								"recipeingredient",
+								"Chicken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Recipe With Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/recipe/recipetag/Vietnamesisch",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"recipe",
+								"recipetag",
+								"Vietnamesisch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Categories From Recipe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/recipe/recipetag/Vietnamesisch",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"recipe",
+								"recipetag",
+								"Vietnamesisch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Steps From Recipe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/recipe/recipetag/Vietnamesisch",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"recipe",
+								"recipetag",
+								"Vietnamesisch"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Features",
+			"item": [
+				{
+					"name": "Get Recipe GT Rating",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Recipe By Multple Ingredients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/recipe/recipeingredient/Chicken",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"recipe",
+								"recipeingredient",
+								"Chicken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Recipe By an Ingredient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/recipe/recipeingredient/Chicken",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"recipe",
+								"recipeingredient",
+								"Chicken"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

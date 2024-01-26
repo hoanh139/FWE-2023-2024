@@ -1,0 +1,607 @@
+openapi: 3.1.0
+info:
+  version: '1.0'
+  title: WE_HA1
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /category:
+    get:
+      summary: Get All Category
+      operationId: get-all-category
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Category'
+      servers:
+        - url: 'http://localhost:3000'
+    post:
+      summary: Create a Category
+      operationId: post-category
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Category'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Category'
+      servers:
+        - url: 'http://localhost:3000'
+  '/category/{name}':
+    get:
+      summary: Get a Category
+      operationId: get-category
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Category'
+      servers:
+        - url: 'http://localhost:3000'
+    put:
+      summary: Update a Category
+      operationId: put-category
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Category'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Category'
+      servers:
+        - url: 'http://localhost:3000'
+    delete:
+      summary: Delete a Category
+      operationId: delete-category
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+      servers:
+        - url: 'http://localhost:3000'
+  /ingredient:
+    get:
+      summary: Get All Ingredient
+      operationId: get-all-ingredients
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Ingredient'
+      servers:
+        - url: 'http://localhost:3000'
+    post:
+      summary: Create an Ingredient
+      description: ''
+      operationId: post-ingredient
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Ingredient'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ingredient'
+      servers:
+        - url: 'http://localhost:3000'
+  '/ingredient/{name}':
+    get:
+      summary: Get an Ingredient
+      operationId: get-ingredient
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ingredient'
+      servers:
+        - url: 'http://localhost:3000'
+    put:
+      summary: Update an Ingredient
+      operationId: put-ingredient
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Ingredient'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ingredient'
+      servers:
+        - url: 'http://localhost:3000'
+    delete:
+      summary: Delete an Ingredient
+      operationId: delete-ingredient
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+      servers:
+        - url: 'http://localhost:3000'
+  /recipe:
+    post:
+      summary: Create a Recipe
+      operationId: post-recipe
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Recipe'
+          application/xml:
+            schema:
+              type: object
+          multipart/form-data:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Recipe'
+      servers:
+        - url: 'http://localhost:3000'
+      x-internal: true
+    get:
+      summary: Get All Recipe
+      operationId: get-all-recipes
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Recipe'
+      servers:
+        - url: 'http://localhost:3000'
+  '/recipe/{name}':
+    get:
+      summary: Get a Recipe
+      operationId: get-recipe
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Recipe'
+      servers:
+        - url: 'http://localhost:3000'
+    put:
+      summary: Update a Recipe
+      operationId: put-recipe
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Recipe'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Recipe'
+      servers:
+        - url: 'http://localhost:3000'
+    delete:
+      summary: Delete a Recipe
+      operationId: delete-recipe
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+      servers:
+        - url: 'http://localhost:3000'
+  '/recipe/{name}/ingredients':
+    delete:
+      summary: Delete Ingredients from a Recipe
+      operationId: delete-ingredients-from-recipe
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ingredientNames:
+                  type: array
+                  items:
+                    type: string
+            examples:
+              Example 1:
+                value:
+                  ingredientNames:
+                    - Snake
+                    - Banana
+      responses: {}
+      servers:
+        - url: 'http://localhost:3000'
+  '/recipe/{name}/categories':
+    delete:
+      summary: Delete Categories from a Recipe
+      operationId: delete-categories-from-recipe
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                categories:
+                  type: array
+                  items:
+                    type: string
+            examples:
+              Example 1:
+                value:
+                  categories:
+                    - Wet
+      responses: {}
+      servers:
+        - url: 'http://localhost:3000'
+  /recipeingredient:
+    get:
+      summary: Get All Recipe by Ingredients
+      operationId: get-all-recipe-by-ingredients
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ingredientList:
+                  type: array
+                  items:
+                    type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Recipe'
+      servers:
+        - url: 'http://localhost:3000'
+  '/recipeingredient/{name}':
+    get:
+      summary: Get Ingredients From Recipe
+      operationId: get-ingredients-from-recipe
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RecipeIngredient'
+      servers:
+        - url: 'http://localhost:3000'
+  /recipetag:
+    get:
+      summary: Get All Recipe by Categories
+      operationId: get-all-recipe-by-categories
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                categoryList:
+                  type: array
+                  items:
+                    type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Recipe'
+      servers:
+        - url: 'http://localhost:3000'
+  '/recipetag/{name}':
+    get:
+      summary: Get Categories From Recipe
+      operationId: get-tags-from-recipe
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RecipeTag'
+      servers:
+        - url: 'http://localhost:3000'
+  '/recipestep/{name}':
+    get:
+      summary: Get All RecipeStep
+      operationId: get-all-recipesteps
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RecipeStep'
+      servers:
+        - url: 'http://localhost:3000'
+  '/recipe/recipes/{rating}':
+    get:
+      summary: Get Recipe GT Rating
+      operationId: get-recipe-gt-rating
+      parameters:
+        - name: rating
+          in: path
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Recipe'
+      servers:
+        - url: 'http://localhost:3000'
+  '/recipe/{name}/recipesteps':
+    delete:
+      summary: Delete Steps from a Recipe
+      operationId: delete-steps-from-recipe
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                stepNumbers:
+                  type: array
+                  items:
+                    type: number
+      responses:
+        '200':
+          description: OK
+      servers:
+        - url: 'http://localhost:3000'
+  '/recipeingredient/{ingredient}/ingredient':
+    get:
+      summary: Get All Recipe By an Ingredient
+      operationId: get-all-recipe-by-an-ingredient
+      parameters:
+        - name: ingredient
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Recipe'
+      servers:
+        - url: 'http://localhost:3000'
+components:
+  schemas:
+    Category:
+      type: object
+      title: Category
+      properties:
+        name:
+          type: string
+      required:
+        - name
+    Ingredient:
+      type: object
+      title: Ingredient
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        link:
+          type: string
+      required:
+        - name
+    Recipe:
+      type: object
+      title: Recipe
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        rating:
+          type: number
+          default: 1
+        picture:
+          type: string
+        recipeIngredients:
+          type: array
+          items:
+            $ref: '#/components/schemas/RecipeIngredient'
+        recipeTags:
+          type: array
+          items:
+            $ref: '#/components/schemas/RecipeTag'
+        recipeSteps:
+          type: array
+          items:
+            $ref: '#/components/schemas/RecipeStep'
+      required:
+        - name
+    RecipeIngredient:
+      type: object
+      title: RecipeIngredient
+      properties:
+        amount:
+          type: number
+        unit:
+          type: string
+        ingredient:
+          $ref: '#/components/schemas/Ingredient'
+        recipe:
+          $ref: '#/components/schemas/Recipe'
+      required:
+        - amount
+        - unit
+        - ingredient
+    RecipeTag:
+      type: object
+      title: RecipeTag
+      properties:
+        category:
+          $ref: '#/components/schemas/Category'
+        recipe:
+          $ref: '#/components/schemas/Recipe'
+      required:
+        - category
+    RecipeStep:
+      type: object
+      title: RecipeStep
+      properties:
+        number:
+          type: number
+        description:
+          type: string
+        recipe:
+          $ref: '#/components/schemas/Recipe'
+      required:
+        - number
